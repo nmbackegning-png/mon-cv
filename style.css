@@ -1,0 +1,139 @@
+/* ----- Style général ----- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f6efe9;
+  color: #2d1f18;
+}
+img{
+position: absolute;
+top: 0;
+right: 0;
+width: 100px;
+height: auto;
+}
+
+/* ----- Conteneur principal du CV ----- */
+.cv-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* deux colonnes : gauche / droite */
+  gap: 30px;
+  width: 80%;
+  max-width: 950px;
+  margin: 40px auto;
+  background-color: #f9f3ef;
+  border-radius: 15px;
+  padding: 40px 50px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* ----- Colonne gauche ----- */
+.left-column {
+  border-right: 2px solid #e5d8cf;
+  padding-right: 25px;
+}
+
+.left-column h3 {
+  font-size: 1rem;
+  color: #2d1f18;
+  border-bottom: 2px solid #d3c3b7;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+/* ----- Colonne droite ----- */
+.right-column {
+  padding-left: 25px;
+}
+
+/* ----- En-tête du CV (nom, titre, etc.) ----- */
+.cv-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.cv-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.cv-header h2 {
+  font-size: 1rem;
+  color: #5c4639;
+  font-weight: 400;
+}
+
+/* ----- Photo en haut à droite ----- */
+.photo {
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #f9f3ef;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ----- Titres de section (ex : Formations, Expériences,Competenes Techniques...) ----- */
+.section-title {
+  background-color: #e6d8cf;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #3d2f28;
+  margin-bottom: 10px;
+}
+
+/* ----- Listes et paragraphes ----- */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+ul li::before {
+  content: "• ";
+  color: #d1bfae;
+}
+
+/* ----- Responsive (petits écrans) ----- */
+@media screen and (max-width: 800px) {
+  .cv-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .left-column {
+    border-right: none;
+    border-bottom: 2px solid #e5d8cf;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .right-column {
+    padding-left: 0;
+  }
+  img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: auto;
+  }
+}
